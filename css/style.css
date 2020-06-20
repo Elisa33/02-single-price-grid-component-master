@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+    background: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*-----Text-----*/
+h2{
+    color: lightseagreen;
+}
+h3{
+    color: hsl(71, 73%, 54%);
+    font-size: 1.2em;
+}
+h4{
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+p{
+    line-height: 1.5em;
+}
+
+span{
+    font-size: xx-large;
+    font-weight: 700;
+    vertical-align:bottom;
+}
+
+span::after {
+    color: hsl(204, 43%, 93%);
+    content: " per month"; 
+    font-size: medium;
+    font-weight: 700;
+    vertical-align:bottom;
+  }
+
+/*------main-----*/
+
+main{
+    width: 45%;
+    background-color: #fff;
+    box-shadow: 0px 10px 30px hsl(218, 22%, 67%);
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "header header" "subscription why";
+}
+
+main div{
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#header {
+    grid-area: header;
+  }
+
+#subscription{
+    color: hsl(204, 43%, 93%);
+    background: lightseagreen;
+    grid-area: subscription;
+    border-bottom-left-radius: 7px;
+
+}
+
+p:first-child(1){
+    color: mediumturquoise;
+}
+
+#header p{
+    color: hsl(218, 22%, 67%);
+}
+
+#why{
+    color: hsl(204, 43%, 93%);
+    background: mediumturquoise;
+    grid-area: why;
+    border-bottom-right-radius: 7px;
+}
+
+#why h4{
+    color: hsl(204, 43%, 93%)
+}
+
+button{
+    background: hsl(71, 73%, 54%);
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(b0,0,0,0.19);
+    font-family: 'Karla', sans-serif;
+    font-size: 1em;
+}
+
+li{
+    list-style: none;
+    padding: 2px;
+
+}
