@@ -21,17 +21,20 @@ body{
 /*-----Text-----*/
 h2{
     color: lightseagreen;
+    margin-bottom: 1em;
+
 }
 h3{
     color: hsl(71, 73%, 54%);
     font-size: 1.2em;
+    margin-bottom: 0.8em;
 }
 h4{
     font-size: 1.2em;
     margin-bottom: 0.5em;
 }
 
-p{
+p, li{
     line-height: 1.5em;
 }
 
@@ -42,28 +45,29 @@ span{
 }
 
 span::after {
-    color: hsl(204, 43%, 93%);
+    color: mediumturquoise;
     content: " per month"; 
+    font-family: 'Karla', sans-serif;
     font-size: medium;
-    font-weight: 700;
+    font-weight: 400;
     vertical-align:bottom;
   }
 
 /*------main-----*/
 
 main{
-    width: 45%;
+    width: 700px;
     background-color: #fff;
     box-shadow: 0px 10px 30px hsl(218, 22%, 67%);
     border-radius: 7px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas: "header header" "subscription why";
 }
 
 main div{
-    padding: 1.5em;
+    padding: 3em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -71,6 +75,7 @@ main div{
 
 #header {
     grid-area: header;
+    height: 200px;
   }
 
 #subscription{
@@ -78,7 +83,6 @@ main div{
     background: lightseagreen;
     grid-area: subscription;
     border-bottom-left-radius: 7px;
-
 }
 
 p:first-child(1){
@@ -105,15 +109,58 @@ button{
     border: none;
     width: 100%;
     border-radius: 5px;
-    height: 40px;
+    height: 50px;
     color: #fff;
-    box-shadow: 0 10px 20px rgba(b0,0,0,0.19);
+    box-shadow: 0 10px 20px #099;
     font-family: 'Karla', sans-serif;
     font-size: 1em;
 }
 
 li{
     list-style: none;
-    padding: 2px;
+}
 
+.attribution{
+    margin-top: 30px;
+    font-size: x-small;
+    text-align: center;
+}
+
+.attribution a{
+    text-decoration: none;
+}
+
+
+@media (max-width: 375px) {
+    body{
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    main div{
+        padding: 1.5em;
+    }
+
+    main{
+        width: 85%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "header" "subscription" "why";
+    }
+    #header{
+        grid-area: header;
+        height: auto;
+    }
+    #subscription{
+        grid-area: subscription;
+        border-radius: 0;
+    }
+    #why{
+        grid-area: why;
+        border-radius: 0 0 7px 7px;
+    }
 }
